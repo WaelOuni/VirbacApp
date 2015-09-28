@@ -1,0 +1,201 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/banniere_mouches_virbacfr">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+    <TextView
+        android:id="@+id/headline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Presence and real use of disinfecting bath at entrance"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffffff" />
+    <TableRow android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/headline"
+        >
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:id="@+id/radioButton"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical" />
+
+    <RadioButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:id="@+id/radioButton1"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15px" />
+    </TableRow>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2"
+        android:layout_marginTop="10px">
+
+        <TextView
+            android:id="@+id/headline1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Presence and real use of disinfecting bath at entrance"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/headline"
+            >
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:id="@+id/radioButton2"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:id="@+id/radioButton3"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15px" />
+        </TableRow>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10px"
+        android:id="@+id/linearLayout3">
+
+        <TextView
+            android:id="@+id/headline4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Presence and real use of disinfecting bath at entrance"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/headline"
+            >
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:id="@+id/radioButton6"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:id="@+id/radioButton7"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15px" />
+        </TableRow>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10px"
+        android:id="@+id/linearLayout4">
+
+        <TextView
+            android:id="@+id/headline5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Presence and real use of disinfecting bath at entrance"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/headline"
+            >
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:id="@+id/radioButton8"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:id="@+id/radioButton9"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15px" />
+        </TableRow>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10px">
+
+        <TextView
+            android:id="@+id/headline6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Presence and real use of disinfecting bath at entrance"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/headline"
+            >
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:id="@+id/radioButton10"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:id="@+id/radioButton11"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15px" />
+        </TableRow>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
