@@ -3,6 +3,7 @@ package virbac.virbacapp;
 /**
  * Created by omar on 27/09/15.
  */
+
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -10,7 +11,6 @@ import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -28,14 +28,12 @@ public class Main extends AppCompatActivity {
     /*
      DECLARACIONES
      */
-    private DrawerLayout drawerLayout;
-    private ListView drawerList;
+    public static DrawerLayout drawerLayout;
+    public static ListView drawerList;
+    public static String[] tagTitles;
     private ActionBarDrawerToggle drawerToggle;
-
     private CharSequence activityTitle;
     private CharSequence itemTitle;
-    private String[] tagTitles;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,14 +134,6 @@ public class Main extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /* La escucha del ListView en el Drawer */
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            selectItem(position);
-        }
-    }
-
     private void selectItem(int position) {
         Fragment fragment = null;
         switch (position) {
@@ -216,5 +206,13 @@ public class Main extends AppCompatActivity {
         super.onConfigurationChanged(newConfig);
         // Cambiar las configuraciones del drawer si hubo modificaciones
         drawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    /* La escucha del ListView en el Drawer */
+    private class DrawerItemClickListener implements ListView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            selectItem(position);
+        }
     }
 }
