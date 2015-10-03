@@ -28,16 +28,17 @@ public class Fragment1House extends Fragment {
         suivMaterialBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Pass to next husbandry category ...", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Pass to next Pen category ...", Toast.LENGTH_LONG).show();
                 Fragment fragment = null;
 
-                fragment = new Fragment2Husbandry();
+                fragment = new Fragment5Pen();
                 android.app.FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
-                Main.drawerList.setItemChecked(1, true);
+
+                getActivity().setTitle(Main.tagTitles[4]);
+                /*Main.drawerList.setItemChecked(1, true);
                 Main.drawerList.setSelection(1);
-                getActivity().setTitle(Main.tagTitles[1]);
-                Main.drawerLayout.closeDrawer(Main.drawerList);
+                Main.drawerLayout.closeDrawer(Main.drawerList);*/
             }
         });
 

@@ -1,7 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/husbandry"
     android:padding="10dp">
 
     <com.gc.materialdesign.views.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,272 +15,390 @@
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin">
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/headline"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Cleaning and disinfecting of the sow before farrowing (perineal area, udders..) ?"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#ffffff" />
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:shrinkColumns="3"
+                android:stretchColumns="*">
 
                 <TableRow
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/headline"
                     android:layout_gravity="center_horizontal">
 
-                    <RadioGroup
-                        android:id="@+id/huq1Group"
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/text"
-                        android:checkedButton="@+id/huq1c2">
+                        android:layout_weight="1"
+                        android:text="Q1 : Cleaning and disinfecting of the sow before farrowing (perineal area, udders..) ?"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000" />
 
-                        <RadioButton
-                            android:id="@+id/huq1c1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Yes"
-                            android:textColor="#ffffff" />
-
-                        <RadioButton
-                            android:id="@+id/huq1c2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="No"
-                            android:textColor="#ffffff" />
-                    </RadioGroup>
-
-
-                </TableRow>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/linearLayout"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/headline1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Protection of the backside and the udder-side of the sow with (rubber) mats (hygienised) ?"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#ffffff" />
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/headline"
-                    android:layout_gravity="center_horizontal">
-
-                    <RadioGroup
-                        android:id="@+id/hq2Group"
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/text"
-                        android:checkedButton="@+id/huq2c2">
+                        android:layout_weight="1"
+                        android:text="YES"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF0000" />
 
-                        <RadioButton
-                            android:id="@+id/huq2c1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Yes"
-                            android:textColor="#ffffff" />
-
-                        <RadioButton
-                            android:id="@+id/huq2c2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="No"
-                            android:textColor="#ffffff" />
-                    </RadioGroup>
-                </TableRow>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/linearLayout2"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/headline4"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Drying-up of piglet at birth ?"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#ffffff" />
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/headline"
-                    android:layout_gravity="center_horizontal">
-
-                    <RadioGroup
-                        android:id="@+id/huq3Group"
+                    <Switch
+                        android:id="@+id/switcher"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/text"
-                        android:checkedButton="@+id/huq3c2">
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
+                        android:showText="true"
+                        android:textOff="No"
+                        android:textOn="Yes" />
 
-                        <RadioButton
-                            android:id="@+id/huq3c1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Yes"
-                            android:textColor="#ffffff" />
-
-                        <RadioButton
-                            android:id="@+id/hq3c2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="No"
-                            android:textColor="#ffffff" />
-                    </RadioGroup>
-                </TableRow>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/linearLayout3"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/headline5"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Positionning of piglets at udder ?"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#ffffff" />
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/headline"
-                    android:layout_gravity="center_horizontal">
-
-                    <RadioGroup
-                        android:id="@+id/huq4Group"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/text"
-                        android:checkedButton="@+id/huq4c2">
-
-                        <RadioButton
-                            android:id="@+id/huq4c1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Yes"
-                            android:textColor="#ffffff" />
-
-                        <RadioButton
-                            android:id="@+id/huq4c2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="No"
-                            android:textColor="#ffffff" />
-                    </RadioGroup>
-
-                </TableRow>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/linearLayout4"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/headline6"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Supplying of energy and /or electrolytic solution ?"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#ffffff" />
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/headline"
-                    android:layout_gravity="center_horizontal">
-
-                    <RadioGroup
-                        android:id="@+id/hq5Group"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/text"
-                        android:checkedButton="@+id/hq5c2">
-
-                        <RadioButton
-                            android:id="@+id/hq5c1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Yes"
-                            android:textColor="#ffffff" />
-
-                        <RadioButton
-                            android:id="@+id/hq5c2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="No"
-                            android:textColor="#ffffff" />
-                    </RadioGroup>
 
                 </TableRow>
 
 
-            </LinearLayout>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
 
-            <com.gc.materialdesign.views.ButtonFloat
-                android:id="@+id/suivHusbandry"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/linearLayout5"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="@dimen/button_vertical_margin"
-                android:background="@color/green"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Q2 : Protection of the backside and the udder-side of the sow with (rubber) mats (hygienised)?"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000" />
 
-                materialdesign:animate="true"
-                materialdesign:iconDrawable="@drawable/button_suivant" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yes"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF0000" />
+
+                    <Switch
+                        android:id="@+id/switcher2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
+                        android:showText="true"
+                        android:textOff="No"
+                        android:textOn="Yes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Q3 : Drying-up of piglet at birth ?"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yes"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF0000" />
+
+                    <Switch
+                        android:id="@+id/switcher3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
+                        android:showText="true"
+                        android:textOff="No"
+
+                        android:textOn="Yes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Q4 : Positionning of piglets at udder ?"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yes"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF0000" />
+
+                    <Switch
+                        android:id="@+id/switcher4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
+                        android:showText="true"
+                        android:textOff="No"
+
+                        android:textOn="Yes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Q5 : Supplying of energy and /or electrolytic solution ?"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yes"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF0000" />
+
+                    <Switch
+                        android:id="@+id/switcher5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
+                        android:showText="true"
+                        android:textOff="No"
+
+                        android:textOn="Yes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Q6 : Strapping of piglets affected by splayleg ?"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yes"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF0000" />
+
+                    <Switch
+                        android:id="@+id/switcher6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
+                        android:showText="true"
+                        android:textOff="No"
+
+                        android:textOn="Yes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Q7 : Frequency of collection of faeces / day above ?"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2 per day"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF0000" />
+
+                    <Switch
+                        android:id="@+id/switcher7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
+                        android:showText="true"
+                        android:textOff="No"
+                        android:textOn="Yes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Q8 : No of control of vulvar discharge / day ?"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2 per day"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF0000" />
+
+                    <Switch
+                        android:id="@+id/switcher8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
+                        android:showText="true"
+                        android:textOff="No"
+                        android:textOn="Yes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Q9 : Rectal To control in sows rejecting food ?"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Yes"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF0000" />
+
+                    <Switch
+                        android:id="@+id/switcher9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
+                        android:showText="true"
+                        android:textOff="No"
+
+                        android:textOn="Yes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Q10 : Urine control / analysis in sows ?"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="YES"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FF0000" />
+
+                    <Switch
+                        android:id="@+id/switcher10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
+                        android:showText="true"
+                        android:textOff="No"
+
+                        android:textOn="Yes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="right">
+
+                    <android.widget.Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <android.widget.Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:orientation="horizontal">
+
+                        <com.gc.materialdesign.views.ButtonFloat
+                            android:id="@+id/precedHusbandry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="24dp"
+                            android:layout_marginTop="@dimen/button_vertical_margin"
+                            android:background="@color/green"
+                            materialdesign:animate="true"
+                            materialdesign:iconDrawable="@drawable/button_preced" />
+
+
+                        <com.gc.materialdesign.views.ButtonFloat
+                            android:id="@+id/suivHusbandry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="24dp"
+                            android:layout_marginTop="@dimen/button_vertical_margin"
+                            android:background="@color/green"
+                            materialdesign:animate="true"
+                            materialdesign:iconDrawable="@drawable/button_suivant" />
+                    </LinearLayout>
+
+
+                </TableRow>
+            </TableLayout>
+
+
         </RelativeLayout>
 
     </com.gc.materialdesign.views.ScrollView>

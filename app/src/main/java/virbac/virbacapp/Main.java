@@ -6,32 +6,25 @@ package virbac.virbacapp;
 
 import android.app.Fragment;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
-
-import java.util.ArrayList;
 
 
 public class Main extends AppCompatActivity {
 
     /*
      DECLARACIONES
-     */
+     *//*
     public static DrawerLayout drawerLayout;
     public static ListView drawerList;
     public static String[] tagTitles;
-    private ActionBarDrawerToggle drawerToggle;
+    private ActionBarDrawerToggle drawerToggle;*/
+
+    public static String[] tagTitles;
     private CharSequence activityTitle;
     private CharSequence itemTitle;
 
@@ -41,14 +34,17 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         itemTitle = activityTitle = getTitle();
+
         tagTitles = getResources().getStringArray(R.array.Tags);
+        /*
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerList = (ListView) findViewById(R.id.left_drawer);
 
         // Setear una sombra sobre el contenido principal cuando el drawer se despliegue
-        drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+        drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);*/
 
         //Crear elementos de la lista
+        /*
         ArrayList<DrawerItem> items = new ArrayList<DrawerItem>();
         items.add(new DrawerItem(tagTitles[0], R.drawable.house));
         items.add(new DrawerItem(tagTitles[1], R.drawable.husbandry2));
@@ -82,23 +78,26 @@ public class Main extends AppCompatActivity {
             public void onDrawerClosed(View view) {
                 getSupportActionBar().setTitle(itemTitle);
 
-                /*Usa este método si vas a modificar la action bar
+                *//*Usa este método si vas a modificar la action bar
                 con cada fragmento
-                 */
+                 *//*
                 //invalidateOptionsMenu();
             }
 
             public void onDrawerOpened(View drawerView) {
                 getSupportActionBar().setTitle(activityTitle);
 
-                /*Usa este método si vas a modificar la action bar
+                *//*Usa este método si vas a modificar la action bar
                 con cada fragmento
-                 */
+                 *//*
                 //invalidateOptionsMenu();
             }
         };
+
+
         //Seteamos la escucha
         drawerLayout.setDrawerListener(drawerToggle);
+*/
 
         if (savedInstanceState == null) {
             selectItem(0);
@@ -114,12 +113,14 @@ public class Main extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+/*
 
         if (drawerToggle.onOptionsItemSelected(item)) {
             // Toma los eventos de selección del toggle aquí
             return true;
         }
 
+*/
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -135,8 +136,10 @@ public class Main extends AppCompatActivity {
     }
 
     private void selectItem(int position) {
-        Fragment fragment = null;
-        switch (position) {
+        Fragment fragment = new Fragment1House();
+
+        //Fragment fragment = new Fragment10result();
+        /*switch (position) {
             case 0:
                 fragment = new Fragment1House();
                 break;
@@ -172,14 +175,17 @@ public class Main extends AppCompatActivity {
             default:
                 break;
         }
-
+*/
         if (fragment != null) {
             android.app.FragmentManager fragmentManager = getFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
-            drawerList.setItemChecked(position, true);
+
+            setTitle(tagTitles[0]);
+        /*    drawerList.setItemChecked(position, true);
             drawerList.setSelection(position);
             setTitle(tagTitles[position]);
             drawerLayout.closeDrawer(drawerList);
+        */
         } else {
 
             Log.e("this is mainActivity", "Error in else case");
@@ -193,7 +199,7 @@ public class Main extends AppCompatActivity {
         itemTitle = title;
         getSupportActionBar().setTitle(itemTitle);
     }
-
+/*
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -208,11 +214,11 @@ public class Main extends AppCompatActivity {
         drawerToggle.onConfigurationChanged(newConfig);
     }
 
-    /* La escucha del ListView en el Drawer */
+    *//* La escucha del ListView en el Drawer *//*
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             selectItem(position);
         }
-    }
+    }*/
 }
