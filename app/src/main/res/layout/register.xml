@@ -63,7 +63,6 @@
             android:layout_marginTop="20dip"
             android:text="@string/register_" />
 
-
         <!--  Link to Login Screen -->
         <Button
             android:id="@+id/btnLinkToLoginScreen"

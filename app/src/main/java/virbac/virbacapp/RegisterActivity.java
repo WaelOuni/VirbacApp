@@ -99,7 +99,6 @@ public class RegisterActivity extends Activity {
 
         final ContentValues values = new ContentValues();
 
-
         String email = emailUsr;
         String motdepasse = motdepasseUsr;
         String nom = name;

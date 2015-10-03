@@ -34,7 +34,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import virbac.virbacapp.tables.Users;
-
 /**
  * A login screen that offers login via email/password.
  */
