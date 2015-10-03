@@ -2,22 +2,32 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
+    android:layout_height="fill_parent"
+    android:background="#b2b2b2">
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dip" >
+        android:padding="10dip">
         <!--  View Title Label -->
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dip"
-            android:text="@string/register"
+            android:singleLine="false"
+            android:text="register profile"
             android:textSize="25sp"
             android:textStyle="bold" />
-        <!--  Name Label -->
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/image" />
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -28,7 +38,6 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName" />
-
         <!--  Email Label -->
         <TextView
             android:layout_width="fill_parent"
@@ -40,35 +49,30 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
-
         <!--  Password Label -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dip"
             android:text="@string/password" />
-
         <!--  Password TextField -->
         <EditText
             android:id="@+id/registerPassword"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
-
         <!--  Register Button -->
-
         <com.gc.materialdesign.views.ButtonFloat
             android:id="@+id/btnRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="20dip"
+            android:layout_gravity="right"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="40dip"
             android:background="#1E88E5"
             materialdesign:animate="true"
             materialdesign:iconDrawable="@drawable/ic_add" />
-
     </LinearLayout>
-
 </ScrollView>

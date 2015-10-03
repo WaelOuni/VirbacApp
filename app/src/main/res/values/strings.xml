@@ -17,6 +17,7 @@
         <item>Nutrition</item>
         <item>Colostrum Intake</item>
         <item>result</item>
+        <item>Profile</item>
 
     </string-array>
     <string name="logout">Logout Me</string>
@@ -33,7 +34,7 @@
     <string name="notification">Notification</string>
     <string name="notification_title">Connexion réussie</string>
     <string name="notification_desc">Votre session est active</string>
-    <string name="new_account">Je n\'ai pas une compte. Inscrivez-moi !</string>
+    <string name="new_account">I don\'t have account. Sign me up!</string>
     <string name="alreadyregistred">Already registred. Login Me!</string>
     <string name="register_">Register</string>
 </resources>

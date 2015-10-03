@@ -53,7 +53,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     ArrayList<String> DUMMY_CREDENTIALS = new ArrayList<>();
     com.gc.materialdesign.views.CheckBox checkBox;
     String nameu;
-    String email1, password1, user;
+    String email1, password1, user, id, ema, pass;
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -71,7 +71,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         setContentView(R.layout.activity_login);
 
 
-        String columns[] = new String[]{Users.NAME, Users.EMAIL, Users.MOTDEPASSE};
+        String columns[] = new String[]{Users._ID, Users.NAME, Users.EMAIL, Users.MOTDEPASSE};
         Uri mContacts = VirbacContentProvider.USER_CONTENT_URI;
         Cursor cur = managedQuery(mContacts, columns, null, null, null);
         if (cur.getCount() == 0) {
@@ -80,15 +80,18 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         } else {
 
             nameu = "";
-
             for (cur.moveToFirst(); !cur.isAfterLast(); cur.moveToNext()) {
-                nameu = nameu + cur.getString(cur.getColumnIndex(Users.NAME)) + ":" +
+
+                nameu = nameu +
+                        cur.getInt(cur.getColumnIndex(Users._ID)) + ":" +
+                        cur.getString(cur.getColumnIndex(Users.NAME)) + ":" +
                         cur.getString(cur.getColumnIndex(Users.EMAIL)) + ":" +
                         cur.getString(cur.getColumnIndex(Users.MOTDEPASSE)) + "//";
 
             }
             DUMMY_CREDENTIALS.add(nameu);
             Log.i("affiche", nameu);
+
         }
 
 
@@ -331,11 +334,14 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 for (String credential1 : pieces) {
                     String[] pieces1 = credential1.split(":");
 
-                    if (pieces1[1].equals(mEmail)) {
-                        user = pieces1[0];
+                    if (pieces1[2].equals(mEmail)) {
+                        id = pieces1[0];
+                        user = pieces1[1];
+                        ema = pieces1[2];
+                        pass = pieces1[3];
                         // Account exists, return true if the password matches.
                         Log.i("if true", "authentfication avec succés");
-                        return pieces1[2].equals(mPassword);
+                        return pieces1[3].equals(mPassword);
                     }
                 }
             }
@@ -361,16 +367,18 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                     email1 = mEmailView.getText().toString();
                     password1 = mPasswordView.getText().toString();
 
+
                 } else if (!checkBox.isCheck()) {
                     getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit().clear().commit();
 
                 }
                 Intent i = new Intent(LoginActivity.this, Main.class);
+                i.putExtra("id", id);
                 i.putExtra("name", user);
-                i.putExtra("password", password1);
-                i.putExtra("email", email1);
+                i.putExtra("password", pass);
+                i.putExtra("email", ema);
                 startActivity(i);
-                Log.i("succes", "authentfication avec succés");
+                Log.i("succes", "Authentication successful");
 
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));

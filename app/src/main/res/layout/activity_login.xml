@@ -62,7 +62,7 @@
                     android:layout_below="@+id/editText2"
                     android:background="#1E88E5"
                     android:checked="true"
-                    android:text="Se souvenir de votre login et mot de passe"
+                    android:text="Remember me"
                     android:textAlignment="center"
                     android:textSize="12dp"
                     materialdesign:check="true" />
@@ -72,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="Se souvenir de votre login et mot de passe"
+                    android:text="Remember me"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@android:color/white"
 

@@ -2,13 +2,13 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Mot de passe</string>
-    <string name="action_sign_in">Connectez vous</string>
-    <string name="action_sign_in_short">Connecter</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Connect</string>
+    <string name="action_sign_in_short">Connect</string>
 
-    <string name="error_invalid_email">Votre email est incorrect !!</string>
-    <string name="error_invalid_password">Votre mot de passe est trop courte !!</string>
-    <string name="error_incorrect_password">Votre mot de passe est incorrect !!</string>
-    <string name="error_field_required">Ce champ est obligatoire !!</string>
+    <string name="error_invalid_email">Your email is incorrect !!</string>
+    <string name="error_invalid_password">Your password is too short !!</string>
+    <string name="error_incorrect_password">Your Password is incorrect !!</string>
+    <string name="error_field_required">This field is required !!</string>
 
 </resources>

@@ -47,12 +47,16 @@ public class RegisterActivity extends Activity {
                 View focusView = null;
 
                 // Check for a valid password, if the user entered one.
-                if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+
+                if (TextUtils.isEmpty(password)) {
+                    inputPassword.setError(getString(R.string.error_field_required));
+                    focusView = inputPassword;
+                    cancel = true;
+                } else if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
                     inputPassword.setError(getString(R.string.error_invalid_password));
                     focusView = inputPassword;
                     cancel = true;
                 }
-
                 // Check for a valid email address.
                 if (TextUtils.isEmpty(email)) {
                     inputEmail.setError(getString(R.string.error_field_required));
