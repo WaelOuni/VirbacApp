@@ -53,9 +53,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     CheckBox checkBox;
     String nameu;
     String email1, password1, user;
-    private SharedPreferences loginPreferences;
-    private SharedPreferences.Editor loginPrefsEditor;
-    private Boolean saveLogin;
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */

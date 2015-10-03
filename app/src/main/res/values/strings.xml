@@ -5,7 +5,7 @@
     <string name="action_refresh">Refresh</string>
     <string name="hello_world">Hello world!</string>
     <!-- Navigation Drawer Menu Items -->
---><!-- Keep them with titles array accordingly -->
+    <!-- Keep them with titles array accordingly -->
     <string-array name="Tags">
         <item>House</item>
         <item>Husbandry</item>
