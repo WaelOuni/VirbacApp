@@ -33,7 +33,7 @@
     <string name="notification">Notification</string>
     <string name="notification_title">Connexion réussie</string>
     <string name="notification_desc">Votre session est active</string>
-    <string name="new_account">Je n\'ai pas compte. Inscrivez-moi!</string>
+    <string name="new_account">Je n\'ai pas une compte. Inscrivez-moi !</string>
     <string name="alreadyregistred">Already registred. Login Me!</string>
     <string name="register_">Register</string>
 </resources>

@@ -1,20 +1,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:gravity="center_horizontal"
-    android:orientation="vertical" android:paddingBottom="@dimen/activity_vertical_margin"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/banniere_mouches_virbacfr"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin" tools:context=".LoginActivity"
-    android:background="@drawable/banniere_mouches_virbacfr">
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity">
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/index"
         android:layout_alignParentTop="true"
+        android:layout_gravity="right"
 
-        android:layout_gravity="right" />
+        android:src="@drawable/index" />
     <!-- Login progress -->
     <ProgressBar android:id="@+id/login_progress" style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -42,13 +47,50 @@
                 android:maxLines="1" android:singleLine="true"
                 android:textColor="#ffff"
                 android:textColorHint="#fff" />
-            <CheckBox android:id="@+id/retenir" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@+id/editText2" android:layout_below="@+id/editText2" android:textSize="12dp" android:text="Se souvenir de votre login et mot de passe"
-                android:checked="false" android:textColor="#fff"
-                android:textStyle="bold|italic" />
-            <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
-                android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" android:text="@string/action_sign_in"
-                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <com.gc.materialdesign.views.CheckBox
+                    android:id="@+id/retenir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText2"
+                    android:layout_below="@+id/editText2"
+                    android:background="#1E88E5"
+                    android:checked="true"
+                    android:text="Se souvenir de votre login et mot de passe"
+                    android:textAlignment="center"
+                    android:textSize="12dp"
+                    materialdesign:check="true" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Se souvenir de votre login et mot de passe"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/white"
+
+                    android:textStyle="bold|italic" />
+
+
+            </LinearLayout>
+
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/email_sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#80000000"
+                android:text="@string/action_sign_in" />
+
+
             <!--  Link to Registration Screen -->
             <Button
                 android:id="@+id/btnLinkToRegisterScreen"
@@ -59,6 +101,7 @@
                 android:text="@string/new_account"
                 android:textColor="#21dbd4"
                 android:textStyle="bold" />
+
         </LinearLayout>
     </ScrollView>
 

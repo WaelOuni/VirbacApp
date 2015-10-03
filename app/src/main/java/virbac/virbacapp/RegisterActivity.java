@@ -5,10 +5,12 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.gc.materialdesign.views.ButtonFloat;
 
 import virbac.virbacapp.tables.Users;
 
@@ -16,8 +18,7 @@ import virbac.virbacapp.tables.Users;
  * Created by omar on 28/09/15.
  */
 public class RegisterActivity extends Activity {
-    Button btnRegister;
-    Button btnLinkToLogin;
+    ButtonFloat btnRegister;
     EditText inputFullName;
     EditText inputEmail;
     EditText inputPassword;
@@ -34,9 +35,7 @@ public class RegisterActivity extends Activity {
         inputFullName = (EditText) findViewById(R.id.registerName);
         inputEmail = (EditText) findViewById(R.id.registerEmail);
         inputPassword = (EditText) findViewById(R.id.registerPassword);
-        btnRegister = (Button) findViewById(R.id.btnRegister);
-        btnLinkToLogin = (Button) findViewById(R.id.btnLinkToLoginScreen);
-
+        btnRegister = (ButtonFloat) findViewById(R.id.btnRegister);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -74,15 +73,11 @@ public class RegisterActivity extends Activity {
                     // perform the user login attempt.
                     saveUser(name, email, password);
 
-                }
-            }
-        });
-        btnLinkToLogin.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
+                    Log.i("test database:", "nom : " + name + " , email : " + email + " mot de passe :" + password);
+                    finish();
 
-                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(i);
-                finish();
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                }
             }
         });
     }
@@ -120,5 +115,6 @@ public class RegisterActivity extends Activity {
         Toast.makeText(getApplicationContext(), "This compte has been successfully added", Toast.LENGTH_LONG).show();
 
 
+        Log.i("test database:", "nom : " + name + " , email : " + email);
     }
 }

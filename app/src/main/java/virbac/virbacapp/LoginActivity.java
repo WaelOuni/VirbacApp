@@ -25,10 +25,12 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.gc.materialdesign.views.ButtonRectangle;
+import com.gc.materialdesign.views.CheckBox;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +51,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      * TODO: remove after connecting to a real authentication system.
      */
     ArrayList<String> DUMMY_CREDENTIALS = new ArrayList<>();
-    CheckBox checkBox;
+    com.gc.materialdesign.views.CheckBox checkBox;
     String nameu;
     String email1, password1, user;
     /**
@@ -86,7 +88,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
             }
             DUMMY_CREDENTIALS.add(nameu);
-            Log.i("affiche", String.valueOf(DUMMY_CREDENTIALS.size()));
+            Log.i("affiche", nameu);
         }
 
 
@@ -105,7 +107,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             }
         });
         checkBox = (CheckBox) findViewById(R.id.retenir);
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        ButtonRectangle mEmailSignInButton = (ButtonRectangle) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -121,6 +123,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
                 Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(i);
+                finish();
 
             }
         });
@@ -348,7 +351,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
             if (success) {
 
-                if (checkBox.isChecked()) {
+                if (checkBox.isCheck()) {
                     getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
                             .edit()
                             .putString(PREF_EMAIL, mEmailView.getText().toString())
@@ -358,7 +361,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                     email1 = mEmailView.getText().toString();
                     password1 = mPasswordView.getText().toString();
 
-                } else if (!checkBox.isChecked()) {
+                } else if (!checkBox.isCheck()) {
                     getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit().clear().commit();
 
                 }
