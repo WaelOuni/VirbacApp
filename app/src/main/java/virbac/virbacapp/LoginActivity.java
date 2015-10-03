@@ -9,6 +9,7 @@ import android.content.ContentValues;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -24,6 +25,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,53 +40,32 @@ import virbac.virbacapp.tables.Users;
  */
 public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
+    public static final String PREFS_NAME = ".Preferences";
+    private static final String PREF_EMAIL = "email";
+    private static final String PREF_PASSWORD = "password";
+    private static final String PREF_CHECKED = "checked";
     final ContentValues values = new ContentValues();
     /**
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
      */
     ArrayList<String> DUMMY_CREDENTIALS = new ArrayList<>();
+    CheckBox checkBox;
+    String nameu;
+    String email1, password1, user;
+    private SharedPreferences loginPreferences;
+    private SharedPreferences.Editor loginPrefsEditor;
+    private Boolean saveLogin;
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
     private UserLoginTask mAuthTask = null;
-
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
-
     private Cursor c ;
-
-    public void saveUser(String emailUsr, String motdepasseUsr) {
-
-        final ContentValues values = new ContentValues();
-
-
-        String email = emailUsr;
-        String motdepasse= motdepasseUsr;
-
-        if (email.length() == 0) {
-            Toast.makeText(getApplicationContext(), "User email should not be empty", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        if (motdepasse.length() == 0) {
-            Toast.makeText(getApplicationContext(), "User motdepasse should not be empty", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-            String auth = email + ":" + motdepasse;
-            values.put(Users.EMAIL, email);
-            values.put(Users.MOTDEPASSE, motdepasse);
-            getContentResolver().insert(VirbacContentProvider.USER_CONTENT_URI, values);
-
-            Toast.makeText(getApplicationContext(), "This car has been successfully added", Toast.LENGTH_LONG).show();
-            DUMMY_CREDENTIALS.add(auth);
-
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,14 +73,27 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         setContentView(R.layout.activity_login);
 
 
-        c = getContentResolver().query(VirbacContentProvider.USER_CONTENT_URI, Users.PROJECTION_ALL,null,null,null);
+        String columns[] = new String[]{Users.NAME, Users.EMAIL, Users.MOTDEPASSE};
+        Uri mContacts = VirbacContentProvider.USER_CONTENT_URI;
+        Cursor cur = managedQuery(mContacts, columns, null, null, null);
+        if (cur.getCount() == 0) {
+            Toast.makeText(LoginActivity.this, "ADD USER",
+                    Toast.LENGTH_LONG).show();
+        } else {
+
+            nameu = "";
+
+            for (cur.moveToFirst(); !cur.isAfterLast(); cur.moveToNext()) {
+                nameu = nameu + cur.getString(cur.getColumnIndex(Users.NAME)) + ":" +
+                        cur.getString(cur.getColumnIndex(Users.EMAIL)) + ":" +
+                        cur.getString(cur.getColumnIndex(Users.MOTDEPASSE)) + "//";
+
+            }
+            DUMMY_CREDENTIALS.add(nameu);
+            Log.i("affiche", String.valueOf(DUMMY_CREDENTIALS.size()));
+        }
 
 
-        saveUser("wael@gmail.com", "123456");
-
-        Log.i("contenu", ""+c.getCount());
-
-        // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
 
@@ -114,7 +108,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 return false;
             }
         });
-
+        checkBox = (CheckBox) findViewById(R.id.retenir);
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
@@ -135,8 +129,18 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             }
         });
 
+        SharedPreferences pref = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        String email = pref.getString(PREF_EMAIL, "");
+        String password = pref.getString(PREF_PASSWORD, "");
+        String checked = pref.getString(PREF_CHECKED, "");
+
+        mEmailView.setText(email);
+        mPasswordView.setText(password);
+        checkBox.setChecked(Boolean.parseBoolean(checked));
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
     }
 
     private void populateAutoComplete() {
@@ -321,14 +325,19 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 return false;
             }
 
+
             for (String credential : DUMMY_CREDENTIALS) {
-                String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
+                String[] pieces = credential.split("//");
+                Log.i("if true", pieces[0]);
+                for (String credential1 : pieces) {
+                    String[] pieces1 = credential1.split(":");
 
-
-                    Log.i("if true", "authentfication avec succés");
-                    return pieces[1].equals(mPassword);
+                    if (pieces1[1].equals(mEmail)) {
+                        user = pieces1[0];
+                        // Account exists, return true if the password matches.
+                        Log.i("if true", "authentfication avec succés");
+                        return pieces1[2].equals(mPassword);
+                    }
                 }
             }
 
@@ -342,11 +351,28 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             showProgress(false);
 
             if (success) {
-                String login=mEmailView.getText().toString();
+
+                if (checkBox.isChecked()) {
+                    getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+                            .edit()
+                            .putString(PREF_EMAIL, mEmailView.getText().toString())
+                            .putString(PREF_PASSWORD, mPasswordView.getText().toString())
+                            .putString(PREF_CHECKED, "TRUE")
+                            .commit();
+                    email1 = mEmailView.getText().toString();
+                    password1 = mPasswordView.getText().toString();
+
+                } else if (!checkBox.isChecked()) {
+                    getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit().clear().commit();
+
+                }
                 Intent i = new Intent(LoginActivity.this, Main.class);
-                i.putExtra("login",login);
+                i.putExtra("name", user);
+                i.putExtra("password", password1);
+                i.putExtra("email", email1);
                 startActivity(i);
                 Log.i("succes", "authentfication avec succés");
+
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
@@ -360,4 +386,3 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         }
     }
 }
-

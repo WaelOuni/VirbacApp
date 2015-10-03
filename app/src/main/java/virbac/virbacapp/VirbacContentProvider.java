@@ -23,8 +23,10 @@ public class VirbacContentProvider extends android.content.ContentProvider {
 
     private static final String AUTHORITY = "virbac.virbacapp.provider";
     public static final Uri USER_CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + Users.CONTENT_PATH);
+
     private static final int USER = 100;
     private static final int USER_ID = 101;
+
     private static final UriMatcher PROVIDER_URI_MATCHER;
 
     static {
@@ -32,6 +34,7 @@ public class VirbacContentProvider extends android.content.ContentProvider {
 
         PROVIDER_URI_MATCHER.addURI(AUTHORITY, Users.CONTENT_PATH, USER);
         PROVIDER_URI_MATCHER.addURI(AUTHORITY, Users.CONTENT_PATH + "/#", USER_ID);
+
 
     }
 
@@ -100,6 +103,7 @@ public class VirbacContentProvider extends android.content.ContentProvider {
                             + Users.TABLE_USER + ", uri: " + uri);
                 }
                 break;
+
 
             default:
                 throw new IllegalArgumentException("Unsupported URI: " + uri);

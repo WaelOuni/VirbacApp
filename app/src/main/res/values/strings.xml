@@ -19,7 +19,7 @@
         <item>result</item>
 
     </string-array>
-
+    <string name="logout">Logout Me</string>
     <string name="drawer_open">Abrir navigation drawer</string>
     <string name="drawer_close">Cerrar navigation drawer</string>
     <string name="headlines">Encabezados de</string>
@@ -28,7 +28,11 @@
     <string name="fullname">Full Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="login">LOGIN</string>
     <string name="login_">Login</string>
+    <string name="notification">Notification</string>
+    <string name="notification_title">Connexion réussie</string>
+    <string name="notification_desc">Votre session est active</string>
     <string name="new_account">Je n\'ai pas compte. Inscrivez-moi!</string>
     <string name="alreadyregistred">Already registred. Login Me!</string>
     <string name="register_">Register</string>

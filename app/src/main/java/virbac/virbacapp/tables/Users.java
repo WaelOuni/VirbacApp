@@ -15,6 +15,7 @@ public class Users implements BaseColumns {
 
 
     // table records fields
+    public static final String NAME = "name";
     public static final String EMAIL = "email";
     public static final String MOTDEPASSE = "motdepasse" ;
     public static final String CONTENT_PATH = "User";
@@ -29,11 +30,12 @@ public class Users implements BaseColumns {
             + "/vnd.testprovider.cars";
     public static final String CONTENT_ITEM_TYPE = ContentResolver.CURSOR_ITEM_BASE_TYPE
             + "/vnd.testprovider.car";
-    public static final String[] PROJECTION_ALL = { _ID, EMAIL,MOTDEPASSE};
+    public static final String[] PROJECTION_ALL = {_ID, NAME, EMAIL, MOTDEPASSE};
     // records table creation statement
     private static final String CREATE_CAR_TABLE =
             " CREATE TABLE " + TABLE_USER +
                     " (" + Users._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    " " + Users.NAME + " TEXT NOT NULL, " +
                     " " + Users.EMAIL + " TEXT NOT NULL, " +
                     " " + Users.MOTDEPASSE + " TEXT NOT NULL);";
 
