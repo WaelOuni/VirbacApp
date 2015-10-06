@@ -6,27 +6,150 @@ package virbac.virbacapp;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import it.neokree.materialnavigationdrawer.MaterialNavigationDrawer;
+import it.neokree.materialnavigationdrawer.elements.MaterialAccount;
+import it.neokree.materialnavigationdrawer.elements.MaterialSection;
+import it.neokree.materialnavigationdrawer.elements.listeners.MaterialAccountListener;
+import it.neokree.materialnavigationdrawer.elements.listeners.MaterialSectionListener;
 
-public class Main extends AppCompatActivity {
 
-    /*
-     DECLARACIONES
-     *//*
-    public static DrawerLayout drawerLayout;
-    public static ListView drawerList;
+public class Main extends MaterialNavigationDrawer {
+
+
+    //  static int[] persontage  = new int[8];
     public static String[] tagTitles;
-    private ActionBarDrawerToggle drawerToggle;*/
-
-    public static String[] tagTitles;
+    static int[] results = new int[9];
+    MaterialAccount account;
+    Bundle b;
+    String nom, email, pasword, id;
+    MaterialSection section1;
     private CharSequence activityTitle;
     private CharSequence itemTitle;
+
+    /* Método auxiliar para setear el titulo de la action bar */
+    @Override
+    public void setTitle(CharSequence title) {
+        itemTitle = title;
+        getSupportActionBar().setTitle(itemTitle);
+    }
+
+    @Override
+    public void init(Bundle bundle) {
+
+        itemTitle = activityTitle = getTitle();
+        b = getIntent().getExtras();
+        id = b.getString("id");
+        nom = b.getString("name");
+        email = b.getString("email");
+        pasword = b.getString("password");
+        Log.i("id", id);
+        Log.i("nom", nom);
+        Log.i("password", pasword);
+        tagTitles = getResources().getStringArray(R.array.Tags);
+        setTitle(tagTitles[0]);
+        this.disableLearningPattern();
+        setBackPattern(MaterialNavigationDrawer.BACKPATTERN_BACK_TO_FIRST);
+        account = new MaterialAccount(this.getResources(), nom, email, R.drawable.image, null);
+
+        this.addAccount(account);
+        this.addSubheader("Sections :");
+
+        section1 = newSection("Sondage", new Fragment1House());
+        section1.setBackgroundColor(Color.BLACK);
+
+        addSection(section1);
+        section1.setSectionColor(Color.GRAY, 15);
+
+        MaterialSection help = newSection("About us ", new About());
+
+        addBottomSection(help);
+        help.setSectionColor(Color.GRAY, 15);
+
+        this.setAccountListener(new MaterialAccountListener() {
+            @Override
+            public void onAccountOpening(MaterialAccount materialAccount) {
+                Fragment fragment = new Fragmentubdate();
+                android.app.FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
+
+                setTitle(tagTitles[10]);
+
+            }
+
+            @Override
+            public void onChangeAccount(MaterialAccount materialAccount) {
+
+            }
+        });
+
+        section1.setOnClickListener(new MaterialSectionListener() {
+            @Override
+            public void onClick(MaterialSection materialSection) {
+                Fragment fragment = new Fragment1House();
+                android.app.FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
+                setTitle(tagTitles[0]);
+            }
+        });
+        enableToolbarElevation();
+        //   thread.start();
+    }
+
+/*
+    private Thread thread = new Thread(new Runnable() {
+        @Override
+        public void run() {
+            try {
+                Thread.sleep(4000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+//                    removeAccount(account);
+//                    notifyAccountDataChanged();
+//                    removeSection(target);
+                    setSection(target);
+                }
+            });
+        }
+    });*/
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.deconnexion) {
+
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+
+
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}
+
+/*
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +166,7 @@ public class Main extends AppCompatActivity {
         // Setear una sombra sobre el contenido principal cuando el drawer se despliegue
         drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);*/
 
-        //Crear elementos de la lista
+//Crear elementos de la lista
         /*
         ArrayList<DrawerItem> items = new ArrayList<DrawerItem>();
         items.add(new DrawerItem(tagTitles[0], R.drawable.house));
@@ -97,45 +220,16 @@ public class Main extends AppCompatActivity {
 
         //Seteamos la escucha
         drawerLayout.setDrawerListener(drawerToggle);
-*/
 
-        if (savedInstanceState == null) {
-            selectItem(0);
+
+if (savedInstanceState == null) {
+        selectItem(0);
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-/*
-
-        if (drawerToggle.onOptionsItemSelected(item)) {
-            // Toma los eventos de selección del toggle aquí
-            return true;
         }
 
-*/
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.deconnexion) {
-
-            startActivity(new Intent(this,LoginActivity.class));
-            finish();
 
 
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void selectItem(int position) {
+private void selectItem(int position) {
         Fragment fragment = new Fragment1House();
 
         //Fragment fragment = new Fragment10result();
@@ -175,31 +269,27 @@ public class Main extends AppCompatActivity {
             default:
                 break;
         }
-*/
-        if (fragment != null) {
-            android.app.FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
 
-            setTitle(tagTitles[0]);
+        if (fragment != null) {
+        android.app.FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
+
+        setTitle(tagTitles[0]);
         /*    drawerList.setItemChecked(position, true);
             drawerList.setSelection(position);
             setTitle(tagTitles[position]);
             drawerLayout.closeDrawer(drawerList);
         */
+        /*
         } else {
 
-            Log.e("this is mainActivity", "Error in else case");
+        Log.e("this is mainActivity", "Error in else case");
         }
 
-    }
+        }
 
-    /* Método auxiliar para setear el titulo de la action bar */
-    @Override
-    public void setTitle(CharSequence title) {
-        itemTitle = title;
-        getSupportActionBar().setTitle(itemTitle);
-    }
-/*
+
+
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -221,4 +311,4 @@ public class Main extends AppCompatActivity {
             selectItem(position);
         }
     }*/
-}
+

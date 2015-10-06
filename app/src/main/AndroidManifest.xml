@@ -15,7 +15,6 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -31,13 +30,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main"/>
-        <activity android:name=".RegisterActivity"/>
+        <activity
+            android:name=".Main"
+            android:theme="@style/MyNavigationDrawerTheme"></activity>
+        <activity android:name=".RegisterActivity" />
+
         <provider
             android:name=".VirbacContentProvider"
             android:authorities="virbac.virbacapp.provider" >
         </provider>
 
+        <activity
+            android:name=".AboutUs"
+            android:label="@string/title_activity_about_us"></activity>
     </application>
 
 </manifest>

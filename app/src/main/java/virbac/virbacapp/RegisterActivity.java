@@ -86,6 +86,12 @@ public class RegisterActivity extends Activity {
         });
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+    }
+
     private boolean isEmailValid(String email) {
         return email.contains("@");
     }

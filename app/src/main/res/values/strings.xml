@@ -37,6 +37,10 @@
     <string name="new_account">I don\'t have account. Sign me up!</string>
     <string name="alreadyregistred">Already registred. Login Me!</string>
     <string name="register_">Register</string>
+    <string name="title_activity_about_us">About Us</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="name_company">Virbac France</string>
 </resources>
 
 

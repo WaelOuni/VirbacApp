@@ -46,7 +46,6 @@ public class Fragment10result extends Fragment {    // this Fragment will be cal
 
         tf = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Regular.ttf");
         mChart.setDescription("");
-
         mChart.setWebLineWidth(1.5f);
         mChart.setWebLineWidthInner(0.75f);
         mChart.setWebAlpha(100);
@@ -61,7 +60,7 @@ public class Fragment10result extends Fragment {    // this Fragment will be cal
 
         XAxis xAxis = mChart.getXAxis();
         xAxis.setTypeface(tf);
-        xAxis.setTextSize(9f);
+        xAxis.setTextSize(14f);
 
         YAxis yAxis = mChart.getYAxis();
         yAxis.setTypeface(tf);
@@ -70,6 +69,8 @@ public class Fragment10result extends Fragment {    // this Fragment will be cal
         yAxis.setStartAtZero(true);
 
         Legend l = mChart.getLegend();
+        l.setTextSize(12f);
+        l.setFormToTextSpace(19F);
         l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
         l.setTypeface(tf);
         l.setXEntrySpace(7f);
@@ -101,20 +102,21 @@ public class Fragment10result extends Fragment {    // this Fragment will be cal
 
         Entry house, pen, sow, nutrution, husbandry, managemnet, health, piglet, COLOSTRUM_INTAKE;
 
-        house = new Entry(6.00f, 0);
+        house = new Entry((float) Main.results[0], 0);
 
-        husbandry = new Entry(0.00f, 1);
+        pen = new Entry((float) Main.results[1], 1);
+        sow = new Entry((float) Main.results[2], 2);
 
-        piglet = new Entry(7.00f, 2);
-        managemnet = new Entry(0.00f, 3);
 
-        pen = new Entry(4.00f, 4);
-        health = new Entry(5.00f, 5);
+        nutrution = new Entry((float) Main.results[3], 3);
+        husbandry = new Entry((float) Main.results[4], 4);
 
-        sow = new Entry(3.00f, 6);
+        managemnet = new Entry((float) Main.results[5], 5);
+        health = new Entry((float) Main.results[6], 6);
+        piglet = new Entry((float) Main.results[7], 7);
 
-        nutrution = new Entry(1.00f, 7);
-        COLOSTRUM_INTAKE = new Entry(2.00f, 8);
+
+        COLOSTRUM_INTAKE = new Entry((float) Main.results[8], 8);
 
         yVals1.add(house);
 
@@ -129,8 +131,6 @@ public class Fragment10result extends Fragment {    // this Fragment will be cal
         yVals1.add(nutrution);
 
         yVals1.add(COLOSTRUM_INTAKE);
-
-
 
         /*for (int i = 0; i < cnt; i++) {
             yVals2.add(new Entry((float) (Math.random() * mult) + mult / 2, i));

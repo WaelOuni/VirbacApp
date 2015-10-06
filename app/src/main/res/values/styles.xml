@@ -1,8 +1,22 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="statistic">
+        <item name="android:background">@drawable/sondage</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyNavigationDrawerTheme" parent="MaterialNavigationDrawerTheme">
+
+        <item name="colorPrimary">#8bc34a</item>
+        <item name="colorPrimaryDark">#558b2f</item>
+        <item name="colorAccent">#FFFFFF</item>
+        <item name="multipaneSupport">true</item>
+        <item name="toolbarElevation">true</item>
+        <item name="singleAccount">true</item>
+    </style>
 </resources>

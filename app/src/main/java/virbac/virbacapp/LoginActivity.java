@@ -379,6 +379,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 i.putExtra("email", ema);
                 startActivity(i);
                 Log.i("succes", "Authentication successful");
+                finish();
 
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));

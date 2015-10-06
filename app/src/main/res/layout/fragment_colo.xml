@@ -25,7 +25,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -43,10 +44,11 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
-                    <Switch
+                    <com.gc.materialdesign.views.Switch
                         android:id="@+id/switcher"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:showText="true"
@@ -60,7 +62,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -78,10 +81,11 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
-                    <Switch
+                    <com.gc.materialdesign.views.Switch
                         android:id="@+id/switcher2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:showText="true"
@@ -92,7 +96,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -110,10 +115,11 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
-                    <Switch
+                    <com.gc.materialdesign.views.Switch
                         android:id="@+id/switcher3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:showText="true"
@@ -124,7 +130,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -142,10 +149,11 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
-                    <Switch
+                    <com.gc.materialdesign.views.Switch
                         android:id="@+id/switcher4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:showText="true"
@@ -156,7 +164,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -174,10 +183,11 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
-                    <Switch
+                    <com.gc.materialdesign.views.Switch
                         android:id="@+id/switcher5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:showText="true"
@@ -188,7 +198,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -206,10 +217,11 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
-                    <Switch
+                    <com.gc.materialdesign.views.Switch
                         android:id="@+id/switcher6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:showText="true"
@@ -220,7 +232,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -238,10 +251,11 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
-                    <Switch
+                    <com.gc.materialdesign.views.Switch
                         android:id="@+id/switcher7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:showText="true"
@@ -252,7 +266,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -270,10 +285,11 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
-                    <Switch
+                    <com.gc.materialdesign.views.Switch
                         android:id="@+id/switcher8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:showText="true"
@@ -284,7 +300,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -302,10 +319,11 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
-                    <Switch
+                    <com.gc.materialdesign.views.Switch
                         android:id="@+id/switcher9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:showText="true"
@@ -316,7 +334,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -334,10 +353,11 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
-                    <Switch
+                    <com.gc.materialdesign.views.Switch
                         android:id="@+id/switcher10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:showText="true"
@@ -375,18 +395,19 @@
                             materialdesign:animate="true"
                             materialdesign:iconDrawable="@drawable/button_preced" />
 
-                        <com.gc.materialdesign.views.ButtonRectangle
+                        <com.gc.materialdesign.views.ButtonFloat
+
                             android:id="@+id/showStats"
-                            android:layout_width="250dp"
-                            android:layout_height="100dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
-
-
                             android:layout_alignParentRight="true"
                             android:layout_marginRight="24dp"
-                            android:layout_marginTop="50px"
-                            android:background="#1E88E5"
-                            android:text="Show statistics" />
+                            android:layout_marginTop="@dimen/button_vertical_margin"
+                            android:background="@color/green"
+                            materialdesign:animate="true"
+                            materialdesign:iconDrawable="@drawable/sondage" />
+
 
                         <!-- <com.gc.materialdesign.views.ButtonFlat
                              android:id="@+id/showStats"

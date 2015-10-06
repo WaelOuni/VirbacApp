@@ -7,7 +7,7 @@
 
     <dimen name="left_margin">15px</dimen>
 
-
+    <dimen name="table_row_vertical_margin">20dp</dimen>
     <dimen name="button_vertical_margin">75px</dimen>
     <dimen name="right_margin">16dp</dimen>
 </resources>
