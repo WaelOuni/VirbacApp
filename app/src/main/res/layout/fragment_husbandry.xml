@@ -32,7 +32,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Q1 : Cleaning and disinfecting of the sow before farrowing (perineal area, udders..) ?"
+                        android:text="Cleaning and disinfecting of the sow before farrowing (perineal area, udders..) ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -40,7 +40,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="YES"
+                        android:text="Yes"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
@@ -69,7 +69,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Q2 : Protection of the backside and the udder-side of the sow with (rubber) mats (hygienised)?"
+                        android:text="Protection of the backside and the udder-side of the sow with (rubber) mats (hygienised)?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -103,7 +103,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Q3 : Drying-up of piglet at birth ?"
+                        android:text="Drying-up of piglet at birth ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -138,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Q4 : Positionning of piglets at udder ?"
+                        android:text="Positionning of piglets at udder ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -172,7 +172,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Q5 : Supplying of energy and /or electrolytic solution ?"
+                        android:text="Supplying of energy and /or electrolytic solution ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -206,7 +206,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Q6 : Strapping of piglets affected by splayleg ?"
+                        android:text="Strapping of piglets affected by splayleg ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -240,7 +240,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Q7 : Frequency of collection of faeces / day above ?"
+                        android:text="Frequency of collection of faeces / day above ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -248,7 +248,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="2 per day"
+                        android:text="2/day"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
@@ -274,7 +274,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Q8 : No of control of vulvar discharge / day ?"
+                        android:text="No of control of vulvar discharge / day ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -282,7 +282,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="2 per day"
+                        android:text="2/day"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF0000" />
 
@@ -308,7 +308,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Q9 : Rectal To control in sows rejecting food ?"
+                        android:text="Rectal To control in sows rejecting food ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -343,7 +343,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Q10 : Urine control / analysis in sows ?"
+                        android:text="Urine control / analysis in sows ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 

@@ -22,6 +22,7 @@ public class RegisterActivity extends Activity {
     EditText inputFullName;
     EditText inputEmail;
     EditText inputPassword;
+    EditText input2Password;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class RegisterActivity extends Activity {
         inputFullName = (EditText) findViewById(R.id.registerName);
         inputEmail = (EditText) findViewById(R.id.registerEmail);
         inputPassword = (EditText) findViewById(R.id.registerPassword);
+        input2Password = (EditText) findViewById(R.id.registerPasswordValid);
         btnRegister = (ButtonFloat) findViewById(R.id.btnRegister);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +45,7 @@ public class RegisterActivity extends Activity {
                 String name = inputFullName.getText().toString();
                 String email = inputEmail.getText().toString();
                 String password = inputPassword.getText().toString();
+                String password2 = input2Password.getText().toString();
                 boolean cancel = false;
                 View focusView = null;
 
@@ -54,6 +57,10 @@ public class RegisterActivity extends Activity {
                     cancel = true;
                 } else if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
                     inputPassword.setError(getString(R.string.error_invalid_password));
+                    focusView = inputPassword;
+                    cancel = true;
+                } else if (!password.equals(password2)) {
+                    inputPassword.setError("Check your password again !");
                     focusView = inputPassword;
                     cancel = true;
                 }
@@ -77,7 +84,7 @@ public class RegisterActivity extends Activity {
                     // perform the user login attempt.
                     saveUser(name, email, password);
 
-                    Log.i("test database:", "nom : " + name + " , email : " + email + " mot de passe :" + password);
+                    Log.i("Add user:", "nom : " + name + " , email : " + email + " mot de passe :" + password);
                     finish();
 
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));

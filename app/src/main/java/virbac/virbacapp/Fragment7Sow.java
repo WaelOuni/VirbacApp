@@ -216,7 +216,7 @@ public class Fragment7Sow extends Fragment {
                 android.app.FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
 
-                getActivity().setTitle(Main.tagTitles[2]);
+                getActivity().setTitle(Main.tagTitles[4]);
                 /*Main.drawerList.setItemChecked(1, true);
                 Main.drawerList.setSelection(1);
                 Main.drawerLayout.closeDrawer(Main.drawerList);*/
