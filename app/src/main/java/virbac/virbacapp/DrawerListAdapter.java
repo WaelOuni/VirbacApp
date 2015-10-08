@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
 public class DrawerListAdapter extends BaseAdapter {
 
-
     private Context context;
     private ArrayList<DrawerItem> navDrawerItems;
 

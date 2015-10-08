@@ -2,10 +2,7 @@ package data;
 
 import java.util.ArrayList;
 
-/**
- * Created by imen on 18/06/2015.
- * c'est la structure de donnees utilisee pour gerer les objets Expense avant la mise a jour finale dans la base de donnees.
- */
+
 public class DataListSingleton {
     private static DataListSingleton mInstance;
     private ArrayList<Integer> mList;
@@ -45,12 +42,6 @@ public class DataListSingleton {
         mList.clear();
     }
 
-   /* public void editExpense(ExpenseItemWrapper expense) {
-        int index=getPositionExpenseItem(expense.getId());
-        mList.set(index, expense);
-
-    }*/
-
     public int getPositionItem(long id) {
         int i = 0;
         int res = -1;
@@ -69,7 +60,7 @@ public class DataListSingleton {
         return res;
     }
 
-    public void editExpenseWithoutGettingPosition(int position, Integer in) {
+    public void editWithoutGettingPosition(int position, Integer in) {
         mList.set(position, in);
 
     }
