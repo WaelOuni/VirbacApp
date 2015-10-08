@@ -6,6 +6,7 @@ package virbac.virbacapp;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 
 import com.gc.materialdesign.views.ButtonFloat;
 import com.gc.materialdesign.views.Switch;
+
+import data.DataListSingleton;
 
 /**
  * Created by omar on 27/09/15.
@@ -22,8 +25,10 @@ public class Fragment5Pen extends Fragment {
     ButtonFloat suivMaterialBtn;
     ButtonFloat precedMaterialBtn;
     Switch s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12;
-    int sv1, sv2, sv3, sv4, sv5, sv6, sv7, sv8, sv9, sv10, sv11, sv12, result = 0;
+    int sv1 = 1, sv2 = 1, sv3 = 1, sv4 = 1, sv5 = 1, sv6 = 1, sv7 = 1, sv8 = 1, sv9 = 1, sv10 = 1, sv11 = 1, sv12 = 1, result = 0, per = 0;
 
+
+    DataListSingleton data = DataListSingleton.getInstance();
 
     // this Fragment will be called from MainActivity
     public Fragment5Pen(){}
@@ -218,10 +223,14 @@ public class Fragment5Pen extends Fragment {
 
                 getActivity().setTitle(Main.tagTitles[6]);
                 result = sv1 + sv2 + sv3 + sv4 + sv5 + sv6 + sv7 + sv8 + sv9 + sv10 + sv11 + sv12;
-                Main.results[1] = result;
+                // Main.results[1] = result;
+                data.add(1, result);
+                Log.i("results", "" + data.getItem(1));
                 /*Main.drawerList.setItemChecked(1, true);
                 Main.drawerList.setSelection(1);
                 Main.drawerLayout.closeDrawer(Main.drawerList);*/
+
+                //Log.i("results", "" + Main.results[1]);
             }
         });
 

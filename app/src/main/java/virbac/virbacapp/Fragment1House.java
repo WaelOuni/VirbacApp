@@ -2,6 +2,7 @@ package virbac.virbacapp;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.Toast;
 
 import com.gc.materialdesign.views.ButtonFloat;
 import com.gc.materialdesign.views.Switch;
+
+import data.DataListSingleton;
 
 /**
  * Created by omar on 27/09/15.
@@ -18,8 +21,10 @@ public class Fragment1House extends Fragment {
 
     ButtonFloat suivMaterialBtn;
     Switch s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11;
-    int sv1, sv2, sv3, sv4, sv5, sv6, sv7, sv8, sv9, sv10, sv11, result = 0, per = 0;
+    int sv1 = 1, sv2 = 1, sv3 = 1, sv4 = 1, sv5 = 1, sv6 = 1, sv7 = 1, sv8 = 1, sv9 = 1, sv10 = 1, sv11 = 1, result = 0, per = 0;
 
+
+    DataListSingleton data = DataListSingleton.getInstance();
     public Fragment1House(){}
 
     @Override
@@ -152,7 +157,9 @@ public class Fragment1House extends Fragment {
                 if (s9.isCheck()) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
                     sv9 = 0;
-
+/*   Main.results[0] = result;
+                Log.i("results", ""+Main.results[0]);
+                Main.persontage[0]= per;*/
                 } else {
                     Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
                     sv9 = 1;
@@ -177,7 +184,7 @@ public class Fragment1House extends Fragment {
             public void onCheck(Switch aSwitch, boolean b) {
                 if (s11.isCheck()) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
-                    sv11 = 1;
+                    sv11 = 0;
 
                 } else {
                     Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
@@ -198,8 +205,12 @@ public class Fragment1House extends Fragment {
                 getActivity().setTitle(Main.tagTitles[4]);
                 result = sv1 + sv2 + sv3 + sv4 + sv5 + sv6 + sv7 + sv8 + sv9 + sv10 + sv11;
                 per = ((10 - result) * 100) / 10;
-                Main.results[0] = result;
-                //      Main.persontage[0]= per;
+                data.add(0, result);
+                Log.i("results", "" + data.getItem(0));
+
+             /*   Main.results[0] = result;
+                Log.i("results", ""+Main.results[0]);
+                Main.persontage[0]= per;*/
             }
         });
 

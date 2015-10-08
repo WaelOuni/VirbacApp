@@ -6,6 +6,7 @@ package virbac.virbacapp;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 
 import com.gc.materialdesign.views.ButtonFloat;
 import com.gc.materialdesign.views.Switch;
+
+import data.DataListSingleton;
 
 /**
  * Created by omar on 27/09/15.
@@ -23,8 +26,10 @@ public class Fragment9Colo extends Fragment {
     ButtonFloat showStats;
 
     Switch s1, s2, s3, s4, s5, s6, s7, s8, s9, s10;
-    int sv1, sv2, sv3, sv4, sv5, sv6, sv7, sv8, sv9, sv10, result = 0;
+    int sv1 = 1, sv2 = 1, sv3 = 1, sv4 = 1, sv5 = 1, sv6 = 1, sv7 = 1, sv8 = 1, sv9 = 1, sv10 = 1, result = 0, per = 0;
 
+
+    DataListSingleton data = DataListSingleton.getInstance();
 
 
     // this Fragment will be called from MainActivity
@@ -192,8 +197,7 @@ public class Fragment9Colo extends Fragment {
                 fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
 
                 getActivity().setTitle(Main.tagTitles[2]);
-                result = sv1 + sv2 + sv3 + sv4 + sv5 + sv6 + sv7 + sv8 + sv9 + sv10;
-                Main.results[8] = result;
+
                 /*Main.drawerList.setItemChecked(1, true);
                 Main.drawerList.setSelection(1);
                 Main.drawerLayout.closeDrawer(Main.drawerList);*/
@@ -212,6 +216,9 @@ public class Fragment9Colo extends Fragment {
                 fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
 
                 getActivity().setTitle(Main.tagTitles[9]);
+                result = sv1 + sv2 + sv3 + sv4 + sv5 + sv6 + sv7 + sv8 + sv9 + sv10;
+                data.add(8, result);
+                Log.i("results", "" + data.getItem(8));
                 /*Main.drawerList.setItemChecked(1, true);
                 Main.drawerList.setSelection(1);
                 Main.drawerLayout.closeDrawer(Main.drawerList);*/

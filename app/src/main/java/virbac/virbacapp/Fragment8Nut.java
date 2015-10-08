@@ -6,6 +6,7 @@ package virbac.virbacapp;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 
 import com.gc.materialdesign.views.ButtonFloat;
 import com.gc.materialdesign.views.Switch;
+
+import data.DataListSingleton;
 
 /**
  * Created by omar on 27/09/15.
@@ -25,7 +28,10 @@ public class Fragment8Nut extends Fragment {
     ButtonFloat precedMaterialBtn;
 
     Switch s1, s2, s3, s4, s5, s6, s7, s8, s9, s10;
-    int sv1, sv2, sv3, sv4, sv5, sv6, sv7, sv8, sv9, sv10, result = 0;
+    int sv1 = 1, sv2 = 1, sv3 = 1, sv4 = 1, sv5 = 1, sv6 = 1, sv7 = 1, sv8 = 1, sv9 = 1, sv10 = 1, result = 0, per = 0;
+
+
+    DataListSingleton data = DataListSingleton.getInstance();
     // this Fragment will be called from MainActivity
     public Fragment8Nut(){}
 
@@ -50,12 +56,12 @@ public class Fragment8Nut extends Fragment {
             @Override
             public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
                 if (s1.isCheck()) {
-                    Toast.makeText(getActivity(), "On", Toast.LENGTH_SHORT).show();
-                    sv1 = 1;
+                    Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
+                    sv1 = 0;
 
                 } else {
-                    Toast.makeText(getActivity(), "Off", Toast.LENGTH_SHORT).show();
-                    sv1 = 0;
+                    Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
+                    sv1 = 1;
                 }
             }
         });
@@ -65,12 +71,12 @@ public class Fragment8Nut extends Fragment {
             @Override
             public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
                 if (s2.isCheck()) {
-                    Toast.makeText(getActivity(), "On", Toast.LENGTH_SHORT).show();
-                    sv2 = 1;
+                    Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
+                    sv2 = 0;
 
                 } else {
-                    Toast.makeText(getActivity(), "Off", Toast.LENGTH_SHORT).show();
-                    sv2 = 0;
+                    Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
+                    sv2 = 1;
                 }
             }
         });
@@ -78,12 +84,12 @@ public class Fragment8Nut extends Fragment {
             @Override
             public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
                 if (s3.isCheck()) {
-                    Toast.makeText(getActivity(), "On", Toast.LENGTH_SHORT).show();
-                    sv3 = 1;
+                    Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
+                    sv3 = 0;
 
                 } else {
-                    Toast.makeText(getActivity(), "Off", Toast.LENGTH_SHORT).show();
-                    sv3 = 0;
+                    Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
+                    sv3 = 1;
                 }
             }
         });
@@ -91,12 +97,12 @@ public class Fragment8Nut extends Fragment {
             @Override
             public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
                 if (s4.isCheck()) {
-                    Toast.makeText(getActivity(), "On", Toast.LENGTH_SHORT).show();
-                    sv4 = 1;
+                    Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
+                    sv4 = 0;
 
                 } else {
-                    Toast.makeText(getActivity(), "Off", Toast.LENGTH_SHORT).show();
-                    sv4 = 0;
+                    Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
+                    sv4 = 1;
                 }
             }
         });
@@ -104,12 +110,12 @@ public class Fragment8Nut extends Fragment {
             @Override
             public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
                 if (s5.isCheck()) {
-                    Toast.makeText(getActivity(), "On", Toast.LENGTH_SHORT).show();
-                    sv5 = 1;
+                    Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
+                    sv5 = 0;
 
                 } else {
-                    Toast.makeText(getActivity(), "Off", Toast.LENGTH_SHORT).show();
-                    sv5 = 0;
+                    Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
+                    sv5 = 1;
                 }
             }
         });
@@ -117,12 +123,12 @@ public class Fragment8Nut extends Fragment {
             @Override
             public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
                 if (s6.isCheck()) {
-                    Toast.makeText(getActivity(), "On", Toast.LENGTH_SHORT).show();
-                    sv6 = 1;
+                    Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
+                    sv6 = 0;
 
                 } else {
-                    Toast.makeText(getActivity(), "Off", Toast.LENGTH_SHORT).show();
-                    sv6 = 0;
+                    Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
+                    sv6 = 1;
                 }
             }
         });
@@ -130,12 +136,12 @@ public class Fragment8Nut extends Fragment {
             @Override
             public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
                 if (s7.isCheck()) {
-                    Toast.makeText(getActivity(), "On", Toast.LENGTH_SHORT).show();
-                    sv7 = 1;
+                    Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
+                    sv7 = 0;
 
                 } else {
-                    Toast.makeText(getActivity(), "Off", Toast.LENGTH_SHORT).show();
-                    sv7 = 0;
+                    Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
+                    sv7 = 1;
                 }
             }
         });
@@ -143,12 +149,12 @@ public class Fragment8Nut extends Fragment {
             @Override
             public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
                 if (s8.isCheck()) {
-                    Toast.makeText(getActivity(), "On", Toast.LENGTH_SHORT).show();
-                    sv8 = 1;
+                    Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
+                    sv8 = 0;
 
                 } else {
-                    Toast.makeText(getActivity(), "Off", Toast.LENGTH_SHORT).show();
-                    sv8 = 0;
+                    Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
+                    sv8 = 1;
                 }
             }
         });
@@ -156,12 +162,12 @@ public class Fragment8Nut extends Fragment {
             @Override
             public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
                 if (s9.isCheck()) {
-                    Toast.makeText(getActivity(), "On", Toast.LENGTH_SHORT).show();
-                    sv9 = 1;
+                    Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
+                    sv9 = 0;
 
                 } else {
-                    Toast.makeText(getActivity(), "Off", Toast.LENGTH_SHORT).show();
-                    sv9 = 0;
+                    Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
+                    sv9 = 1;
                 }
             }
         });
@@ -169,16 +175,15 @@ public class Fragment8Nut extends Fragment {
             @Override
             public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
                 if (s10.isCheck()) {
-                    Toast.makeText(getActivity(), "On", Toast.LENGTH_SHORT).show();
-                    sv10 = 1;
+                    Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
+                    sv10 = 0;
 
                 } else {
-                    Toast.makeText(getActivity(), "Off", Toast.LENGTH_SHORT).show();
-                    sv10 = 0;
+                    Toast.makeText(getActivity(), "No", Toast.LENGTH_SHORT).show();
+                    sv10 = 1;
                 }
             }
         });
-
         suivMaterialBtn = (ButtonFloat) rootView.findViewById(R.id.suivNut);
         suivMaterialBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -192,7 +197,9 @@ public class Fragment8Nut extends Fragment {
 
                 getActivity().setTitle(Main.tagTitles[1]);
                 result = sv1 + sv2 + sv3 + sv4 + sv5 + sv6 + sv7 + sv8 + sv9 + sv10;
-                Main.results[3] = result;
+                data.add(3, result);
+                Log.i("results", "" + data.getItem(3));
+
                 /*Main.drawerList.setItemChecked(1, true);
                 Main.drawerList.setSelection(1);
                 Main.drawerLayout.closeDrawer(Main.drawerList);*/

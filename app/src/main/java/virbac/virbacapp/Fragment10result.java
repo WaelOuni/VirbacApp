@@ -28,11 +28,14 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
+import data.DataListSingleton;
+
 /**
  * Created by omar on 27/09/15.
  */
 
 public class Fragment10result extends Fragment {    // this Fragment will be called from MainActivity
+    DataListSingleton data = DataListSingleton.getInstance();
     private RadarChart mChart;
     private Typeface tf;
     public Fragment10result(){}
@@ -102,21 +105,23 @@ public class Fragment10result extends Fragment {    // this Fragment will be cal
 
         Entry house, pen, sow, nutrution, husbandry, managemnet, health, piglet, COLOSTRUM_INTAKE;
 
-        house = new Entry((float) Main.results[0], 0);
+        house = new Entry((float) data.getItem(0), 0);
 
-        pen = new Entry((float) Main.results[1], 1);
-        sow = new Entry((float) Main.results[2], 2);
-
-
-        nutrution = new Entry((float) Main.results[3], 3);
-        husbandry = new Entry((float) Main.results[4], 4);
-
-        managemnet = new Entry((float) Main.results[5], 5);
-        health = new Entry((float) Main.results[6], 6);
-        piglet = new Entry((float) Main.results[7], 7);
+        pen = new Entry((float) data.getItem(1), 1);
+        sow = new Entry((float) data.getItem(2), 2);
 
 
-        COLOSTRUM_INTAKE = new Entry((float) Main.results[8], 8);
+        nutrution = new Entry((float) data.getItem(3), 3);
+        husbandry = new Entry((float) data.getItem(4), 4);
+
+        managemnet = new Entry((float) data.getItem(5), 5);
+        health = new Entry((float) data.getItem(6), 6);
+        piglet = new Entry((float) data.getItem(7), 7);
+        COLOSTRUM_INTAKE = new Entry((float) data.getItem(8), 8);
+
+        Toast.makeText(getActivity(), "" + data.getItem(0) + "" + data.getItem(1) + "" + data.getItem(2) + "" + data.getItem(3) + "" +
+                data.getItem(4) + "" + data.getItem(5) + "" + data.getItem(6) + "" + data.getItem(7) + "" + data.getItem(8), Toast.LENGTH_LONG).show();
+
 
         yVals1.add(house);
 

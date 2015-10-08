@@ -32,7 +32,6 @@ public class Main extends MaterialNavigationDrawer {
     MaterialSection section1;
     private CharSequence activityTitle;
     private CharSequence itemTitle;
-
     /* Método auxiliar para setear el titulo de la action bar */
     @Override
     public void setTitle(CharSequence title) {
