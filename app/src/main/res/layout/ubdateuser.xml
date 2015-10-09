@@ -21,7 +21,7 @@
         android:layout_marginTop="10dp"
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
         android:layout_marginTop="10dp"
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="15dp" />
 
     <EditText
@@ -45,7 +45,7 @@
         android:ems="10"
         android:hint="Change your password"
         android:inputType="textPassword"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textColorHint="#b2b2b2" />
 
     <EditText
@@ -57,7 +57,7 @@
         android:ems="10"
         android:hint="Confirm your password"
         android:inputType="textPassword"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textColorHint="#b2b2b2" />
 
     <com.gc.materialdesign.views.ButtonRectangle

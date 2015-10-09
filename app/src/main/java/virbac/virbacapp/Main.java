@@ -231,7 +231,7 @@ if (savedInstanceState == null) {
 private void selectItem(int position) {
         Fragment fragment = new Fragment1House();
 
-        //Fragment fragment = new Fragment10result();
+        //Fragment fragment = new Fragmentubdate();
         /*switch (position) {
             case 0:
                 fragment = new Fragment1House();

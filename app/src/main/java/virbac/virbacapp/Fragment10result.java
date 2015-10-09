@@ -13,6 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.animation.Easing;
@@ -36,6 +37,7 @@ import data.DataListSingleton;
 
 public class Fragment10result extends Fragment {    // this Fragment will be called from MainActivity
     DataListSingleton data = DataListSingleton.getInstance();
+    TextView s1, s2;
     private RadarChart mChart;
     private Typeface tf;
     public Fragment10result(){}
@@ -44,6 +46,8 @@ public class Fragment10result extends Fragment {    // this Fragment will be cal
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_result, container, false);
+        s1 = (TextView) rootView.findViewById(R.id.tvXMax);
+        s2 = (TextView) rootView.findViewById(R.id.tvYMax);
 
         mChart = (RadarChart) rootView.findViewById(R.id.chart);
 
@@ -119,9 +123,6 @@ public class Fragment10result extends Fragment {    // this Fragment will be cal
         piglet = new Entry((float) data.getItem(7), 7);
         COLOSTRUM_INTAKE = new Entry((float) data.getItem(8), 8);
 
-        Toast.makeText(getActivity(), "" + data.getItem(0) + "" + data.getItem(1) + "" + data.getItem(2) + "" + data.getItem(3) + "" +
-                data.getItem(4) + "" + data.getItem(5) + "" + data.getItem(6) + "" + data.getItem(7) + "" + data.getItem(8), Toast.LENGTH_LONG).show();
-
 
         yVals1.add(house);
 
@@ -167,6 +168,14 @@ public class Fragment10result extends Fragment {    // this Fragment will be cal
         set1.setDrawFilled(true);
         set1.setLineWidth(2f);
 
+        Toast.makeText(getActivity(), "" + data.getItem(0) + "" + data.getItem(1) + "" + data.getItem(2) + "" + data.getItem(3) + "" +
+                data.getItem(4) + "" + data.getItem(5) + "" + data.getItem(6) + "" + data.getItem(7) + "" + data.getItem(8), Toast.LENGTH_LONG).show();
+        float score = ((float) data.getItem(0) + (float) data.getItem(1) + (float) data.getItem(2) + (float) data.getItem(3) +
+                (float) data.getItem(4) + (float) data.getItem(5) + (float) data.getItem(6) + (float) data.getItem(7) + (float) data.getItem(8)) / 9;
+        s2.setText("Global score : " + score);
+        float per = ((((10 - data.getItem(0)) * 100) / 10) + (((10 - data.getItem(1)) * 100) / 10) + (((10 - data.getItem(2)) * 100) / 10) + (((10 - data.getItem(3)) * 100) / 10) +
+                (((10 - data.getItem(4)) * 100) / 10) + (((10 - data.getItem(5)) * 100) / 10) + (((10 - data.getItem(6)) * 100) / 10) + (((10 - data.getItem(7)) * 100) / 10) + (((10 - data.getItem(8)) * 100) / 10)) / 9;
+        s1.setText("Improvement possible :" + per + "%");
 /*        RadarDataSet set2 = new RadarDataSet(yVals2, "Set 2");
         set2.setColor(ColorTemplate.VORDIPLOM_COLORS[4]);
         set2.setDrawFilled(true);

@@ -10,10 +10,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.gc.materialdesign.views.ButtonFloat;
-import com.gc.materialdesign.views.Switch;
 
 import data.DataListSingleton;
 
@@ -49,10 +50,11 @@ public class Fragment7Sow extends Fragment {
         s9 = (Switch) rootView.findViewById(R.id.switcher9);
         s10 = (Switch) rootView.findViewById(R.id.switcher10);
 
-        s1.setOncheckListener(new com.gc.materialdesign.views.Switch.OnCheckListener() {
-            @Override
-            public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
-                if (s1.isCheck()) {
+        s1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                if (isChecked) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
                     sv1 = 0;
 
@@ -64,10 +66,11 @@ public class Fragment7Sow extends Fragment {
         });
 
 
-        s2.setOncheckListener(new com.gc.materialdesign.views.Switch.OnCheckListener() {
-            @Override
-            public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
-                if (s2.isCheck()) {
+        s2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                if (isChecked) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
                     sv2 = 0;
 
@@ -77,10 +80,11 @@ public class Fragment7Sow extends Fragment {
                 }
             }
         });
-        s3.setOncheckListener(new com.gc.materialdesign.views.Switch.OnCheckListener() {
-            @Override
-            public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
-                if (s3.isCheck()) {
+        s3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                if (isChecked) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
                     sv3 = 0;
 
@@ -90,10 +94,11 @@ public class Fragment7Sow extends Fragment {
                 }
             }
         });
-        s4.setOncheckListener(new com.gc.materialdesign.views.Switch.OnCheckListener() {
-            @Override
-            public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
-                if (s4.isCheck()) {
+        s4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                if (isChecked) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
                     sv4 = 0;
 
@@ -103,10 +108,11 @@ public class Fragment7Sow extends Fragment {
                 }
             }
         });
-        s5.setOncheckListener(new com.gc.materialdesign.views.Switch.OnCheckListener() {
-            @Override
-            public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
-                if (s5.isCheck()) {
+        s5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                if (isChecked) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
                     sv5 = 0;
 
@@ -116,10 +122,11 @@ public class Fragment7Sow extends Fragment {
                 }
             }
         });
-        s6.setOncheckListener(new com.gc.materialdesign.views.Switch.OnCheckListener() {
-            @Override
-            public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
-                if (s6.isCheck()) {
+        s6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                if (isChecked) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
                     sv6 = 0;
 
@@ -129,10 +136,11 @@ public class Fragment7Sow extends Fragment {
                 }
             }
         });
-        s7.setOncheckListener(new com.gc.materialdesign.views.Switch.OnCheckListener() {
-            @Override
-            public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
-                if (s7.isCheck()) {
+        s7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                if (isChecked) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
                     sv7 = 0;
 
@@ -142,10 +150,11 @@ public class Fragment7Sow extends Fragment {
                 }
             }
         });
-        s8.setOncheckListener(new com.gc.materialdesign.views.Switch.OnCheckListener() {
-            @Override
-            public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
-                if (s8.isCheck()) {
+        s8.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                if (isChecked) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
                     sv8 = 0;
 
@@ -155,10 +164,11 @@ public class Fragment7Sow extends Fragment {
                 }
             }
         });
-        s9.setOncheckListener(new com.gc.materialdesign.views.Switch.OnCheckListener() {
-            @Override
-            public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
-                if (s9.isCheck()) {
+        s9.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                if (isChecked) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
                     sv9 = 0;
 
@@ -168,10 +178,11 @@ public class Fragment7Sow extends Fragment {
                 }
             }
         });
-        s10.setOncheckListener(new com.gc.materialdesign.views.Switch.OnCheckListener() {
-            @Override
-            public void onCheck(com.gc.materialdesign.views.Switch aSwitch, boolean b) {
-                if (s10.isCheck()) {
+        s10.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                if (isChecked) {
                     Toast.makeText(getActivity(), "Yes", Toast.LENGTH_SHORT).show();
                     sv10 = 0;
 
@@ -181,6 +192,7 @@ public class Fragment7Sow extends Fragment {
                 }
             }
         });
+
 
         suivMaterialBtn = (ButtonFloat) rootView.findViewById(R.id.suivSow);
         suivMaterialBtn.setOnClickListener(new View.OnClickListener() {
@@ -194,7 +206,7 @@ public class Fragment7Sow extends Fragment {
                 fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
 
                 getActivity().setTitle(Main.tagTitles[7]);
-                result = sv1 + sv2 + sv3 + sv4 + sv5 + sv6 + sv7 + sv8 + sv9 + sv10;
+                result = 10 - (sv1 + sv2 + sv3 + sv4 + sv5 + sv6 + sv7 + sv8 + sv9 + sv10);
                 data.add(2, result);
                 Log.i("results", "" + data.getItem(2));
 
