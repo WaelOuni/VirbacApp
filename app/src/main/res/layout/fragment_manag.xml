@@ -70,7 +70,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Duration and effectiveness of cleaning period between 2 batches in the farrowing room above ?"
+                        android:lines="4"
+                        android:text="Duration and effectiveness\nof cleaning period between\n2 batches in the farrowing\nroom above?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -86,6 +87,7 @@
                         android:id="@+id/switcher2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:showText="true"
@@ -103,7 +105,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Prevention of access to the farrowing room to dogs and cats ?"
+                        android:lines="2"
+                        android:text="Prevention of access to the \nfarrowing room to dogs and cats?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -137,7 +140,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Disposable clothing for visitors ?"
+                        android:text="Disposable clothing for visitors?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -172,7 +175,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Removable, mobile container for dead piglets?"
+                        android:lines="2"
+                        android:text="Removable, mobile container\n for dead piglets?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -206,7 +210,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Number of maternity nurses per 80 sows in maternuty above ?"
+                        android:lines="2"
+                        android:text="Number of maternity nurses \nper 80 sows in maternuty above?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -240,7 +245,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Individual recording of sow's performance?"
+                        android:lines="2"
+                        android:text="Individual recording of sow's\n performance?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -275,7 +281,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Communal reporting of zootechnical performance on a board in the house ?"
+                        android:lines="3"
+                        android:text="Communal reporting of zoo \ntechnicalperformance on a\n board in the house?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -309,7 +316,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Staff Bonus incentives related to improvements on performances"
+                        android:lines="2"
+                        android:text="Staff Bonus incentives related to\nimprovements on performances"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -344,7 +352,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Organisation of training programme for Maternity nurses ?"
+                        android:lines="2"
+                        android:text="Organisation of training\nprogramme for Maternity nurses"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 

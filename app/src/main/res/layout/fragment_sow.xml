@@ -33,7 +33,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Average age of gilts at 1st parturition above ?"
+                        android:text="Average age of gilts at 1st\n parturition above?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -71,7 +71,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="% of sows below 3 body condition entering farrowing house ?"
+                        android:lines="2"
+                        android:text="% of sows below 3 body condition\n entering farrowing house?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -105,7 +106,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="% of sows below 2 body condition at weaning ?"
+                        android:lines="2"
+                        android:text="% of sows below 2 body condition\nat weaning ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -139,7 +141,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Percentage of weight loss during lactation below ?"
+                        android:lines="2"
+                        android:text="Percentage of weight loss\n during lactation below?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -173,7 +176,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Farrowing rate above ?"
+                        android:text="Farrowing rate above?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -207,7 +210,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Farrowing duration between 2 and 4 hours ?"
+                        android:lines="2"
+                        android:text="Farrowing duration between\n2 and 4 hours ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -241,7 +245,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Number of parities per sow per annum above ?"
+                        android:lines="2"
+                        android:text="Number of parities per sow\n per annum above?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -275,7 +280,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Number of pigglets weaned per sow per year above ?"
+                        android:lines="2"
+                        android:text="Number of pigglets weaned\nper sow per year above ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -309,7 +315,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Average litter size over the first 3 paritites above ?"
+                        android:lines="2"
+                        android:text="Average litter size over the\n first 3 paritites above?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -343,7 +350,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Average number of parities in the career of the sow between 5 and 9 °C ?"
+                        android:lines="3"
+                        android:text="Average number of parities \nin the career of the sow \nbetween 5 and 9 °C ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 

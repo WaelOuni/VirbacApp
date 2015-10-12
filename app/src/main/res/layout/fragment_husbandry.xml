@@ -32,7 +32,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Cleaning and disinfecting of the sow before farrowing (perineal area, udders..) ?"
+                        android:lines="3"
+                        android:text="Cleaning and disinfecting \nof the sow before farrowing\n(perineal area, udders..)?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -69,7 +70,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Protection of the backside and the udder-side of the sow with (rubber) mats (hygienised)?"
+                        android:lines="3"
+                        android:text="Protection of the backside and \nthe udder-side of the sow \nwith (rubber) mats (hygienised)?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -103,7 +105,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Drying-up of piglet at birth ?"
+                        android:text="Drying-up of piglet at birth?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -138,7 +140,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Positionning of piglets at udder ?"
+                        android:text="Positionning of piglets at udder?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -172,7 +174,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Supplying of energy and /or electrolytic solution ?"
+                        android:lines="2"
+                        android:text="Supplying of energy and /or\nelectrolytic solution?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -206,7 +209,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Strapping of piglets affected by splayleg ?"
+                        android:lines="2"
+                        android:text="Strapping of piglets affected\n by splayleg ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -240,7 +244,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Frequency of collection of faeces / day above ?"
+                        android:lines="2"
+                        android:text="Frequency of collection of\n faeces / day above ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -274,7 +279,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="No of control of vulvar discharge / day ?"
+                        android:lines="2"
+                        android:text="No of control of vulvar \ndischarge / day ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -308,7 +314,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Rectal To control in sows rejecting food ?"
+                        android:lines="2"
+                        android:text="Rectal To control in sows\n rejecting food ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -343,7 +350,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Urine control / analysis in sows ?"
+                        android:text="Urine control/analysis in sows"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 

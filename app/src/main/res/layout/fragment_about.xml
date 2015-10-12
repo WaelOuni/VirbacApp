@@ -16,20 +16,29 @@
 
             <!-- TODO: Update blank fragment layout -->
 
+
+            <TextView
+                android:id="@+id/about_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/company_icon"
+                android:padding="15dp"
+                android:text="Virbac France est l’une des 30 filiales du groupe Virbac  exclusivement dédiée à la santé animale. Virbac France propose une large gamme de plus de 500 références pour chiens, chats, NAC, volailles et lapins fermiers, équidés, bovins, ovins, porcins, et faune sauvage avec des services associés dédiés aux vétérinaires, auxiliaires spécialisés vétérinaires, éleveurs et propriétaires d’animaux."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/holo_red_dark" />
+
             <ImageView
                 android:id="@+id/company_icon"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:padding="15dp"
                 android:src="@drawable/index" />
 
-
-        </RelativeLayout>
-
-    </ScrollView>
 
     <TextView
         android:id="@+id/group_content"
@@ -50,7 +59,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/company_location_icon"
-        android:layout_marginTop="35dp"
         android:padding="15dp"
         android:text="Le Groupe Virbac"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -62,21 +70,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="230dp"
         android:padding="15dp"
         android:src="@drawable/virbac_location" />
 
-    <TextView
-        android:id="@+id/about_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/company_location_icon"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:padding="15dp"
-        android:text="Virbac France est l’une des 30 filiales du groupe Virbac  exclusivement dédiée à la santé animale. Virbac France propose une large gamme de plus de 500 références pour chiens, chats, NAC, volailles et lapins fermiers, équidés, bovins, ovins, porcins, et faune sauvage avec des services associés dédiés aux vétérinaires, auxiliaires spécialisés vétérinaires, éleveurs et propriétaires d’animaux."
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/holo_red_dark" />
+        </RelativeLayout>
 
+    </ScrollView>
 
 </RelativeLayout>
