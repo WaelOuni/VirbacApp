@@ -82,6 +82,7 @@ public class VirbacContentProvider extends android.content.ContentProvider {
         }
     }
 
+
     @Override
     public Uri insert(Uri uri, ContentValues values) {
         SQLiteDatabase database = mOpenHelper.getWritableDatabase();

@@ -9,6 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="wrap_content"
+             android:layout_height="fill_parent">-->
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,14 +30,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="3"
-                        android:text="Cleaning and disinfecting \nof the sow before farrowing\n(perineal area, udders..)?"
+                        android:lines="2"
+                        android:text="Cleaning and disinfecting of the sow before farrowing\n(perineal area, udders..) ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -64,14 +69,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="3"
-                        android:text="Protection of the backside and \nthe udder-side of the sow \nwith (rubber) mats (hygienised)?"
+                        android:lines="2"
+                        android:text="Protection of the backside and the udder-side of the\nsow with (rubber) mats (hygienised) ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -99,13 +105,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Drying-up of piglet at birth?"
+                        android:text="Drying-up of piglet at birth ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -134,13 +141,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Positionning of piglets at udder?"
+                        android:text="Positionning of piglets at udder ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -168,14 +176,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="2"
-                        android:text="Supplying of energy and /or\nelectrolytic solution?"
+                        android:text="Supplying of energy and /or electrolytic solution ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -203,14 +211,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="2"
-                        android:text="Strapping of piglets affected\n by splayleg ?"
+                        android:text="Strapping of piglets affected by splayleg ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -238,14 +246,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="2"
-                        android:text="Frequency of collection of\n faeces / day above ?"
+                        android:text="Frequency of collection of faeces / day above ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -273,14 +281,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="2"
-                        android:text="No of control of vulvar \ndischarge / day ?"
+                        android:text="No of control of vulvar discharge / day ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -308,14 +316,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="2"
-                        android:text="Rectal To control in sows\n rejecting food ?"
+                        android:text="Rectal To control in sows rejecting food ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -344,6 +352,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
@@ -424,6 +433,6 @@
 
 
         </RelativeLayout>
-
+        <!--</HorizontalScrollView>-->
     </com.gc.materialdesign.views.ScrollView>
 </RelativeLayout>

@@ -9,6 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+-->
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,14 +30,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="2"
-                        android:text="Number of daily feed meals\n per sow above ?"
+                        android:text="Number of daily feed meals per sow above ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -64,14 +68,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="3"
-                        android:text="Average supply of feed/day/sow\n on the 7th day post- \nfarrowing above?"
+                        android:lines="2"
+                        android:text="Average supply of feed/day/sow on the 7th day post- \nfarrowing above ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -99,6 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
@@ -106,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:lines="2"
-                        android:text="Average daily supply of energy\nto sows during lactation above?"
+                        android:text="Average daily supply of energy to sows during lactation\nabove ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -134,14 +140,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="3"
-                        android:text="Average daily lysine supply\n to sows during lactation\n (total lysine) above?"
+                        android:lines="2"
+                        android:text="Average daily lysine supply to sows during lactation\n (total lysine) above ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -169,14 +176,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="2"
-                        android:text="Average fiber content in \nsows lactation feed % above?"
+                        android:text="Average fiber content in sows lactation feed % above ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -204,14 +211,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="2"
-                        android:text="Average daily water consumption\n per sow per day above?"
+                        android:text="Average daily water consumption per sow per day above ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -239,14 +246,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="3"
-                        android:text="Average real consumption of \ndry solid food in piglet \nbefore weaning above?"
+                        android:lines="2"
+                        android:text="Average real consumption of dry solid food in piglet \nbefore weaning above ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -275,6 +283,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
@@ -282,7 +291,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:lines="2"
-                        android:text="Number of feed meals/piglet\n / per day?"
+                        android:text="Number of feed meals / piglet / per day ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -310,14 +319,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:lines="2"
-                        android:text="Concentration of piglet feed\n in lysine above?"
+                        android:text="Concentration of piglet feed in lysine above?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -345,13 +354,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginTop="@dimen/table_row_vertical_margin">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="pH of water below?"
+                        android:text="pH of water below ?"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000" />
 
@@ -425,6 +435,8 @@
 
 
         </RelativeLayout>
-
+        <!--
+        </HorizontalScrollView>
+        -->
     </com.gc.materialdesign.views.ScrollView>
 </RelativeLayout>

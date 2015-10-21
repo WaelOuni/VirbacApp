@@ -15,7 +15,7 @@
         <item name="colorPrimary">#8bc34a</item>
         <item name="colorPrimaryDark">#558b2f</item>
         <item name="colorAccent">#FFFFFF</item>
-        <item name="multipaneSupport">true</item>
+        <item name="multipaneSupport">false</item>
         <item name="toolbarElevation">true</item>
         <item name="singleAccount">true</item>
     </style>

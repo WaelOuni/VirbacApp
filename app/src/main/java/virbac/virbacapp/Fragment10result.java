@@ -37,7 +37,7 @@ import data.DataListSingleton;
 
 public class Fragment10result extends Fragment {    // this Fragment will be called from MainActivity
     DataListSingleton data = DataListSingleton.getInstance();
-    TextView s1, s2;
+    TextView s1, s2, s11, s22;
     private RadarChart mChart;
     private Typeface tf;
     public Fragment10result(){}
@@ -47,7 +47,9 @@ public class Fragment10result extends Fragment {    // this Fragment will be cal
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_result, container, false);
         s1 = (TextView) rootView.findViewById(R.id.tvXMax);
+        s11 = (TextView) rootView.findViewById(R.id.x_improuvement);
         s2 = (TextView) rootView.findViewById(R.id.tvYMax);
+        s22 = (TextView) rootView.findViewById(R.id.y_score);
 
         mChart = (RadarChart) rootView.findViewById(R.id.chart);
 
@@ -179,10 +181,10 @@ public class Fragment10result extends Fragment {    // this Fragment will be cal
                 data.getItem(4) + "" + data.getItem(5) + "" + data.getItem(6) + "" + data.getItem(7) + "" + data.getItem(8), Toast.LENGTH_LONG).show();*/
         float score = ((float) data.getItem(0) + (float) data.getItem(1) + (float) data.getItem(2) + (float) data.getItem(3) +
                 (float) data.getItem(4) + (float) data.getItem(5) + (float) data.getItem(6) + (float) data.getItem(7) + (float) data.getItem(8)) / 9;
-        s2.setText("Global score : " + score);
+        s22.setText("" + score);
         float per = ((((11 - data.getItem(0)) * 100) / 11) + (((12 - data.getItem(1)) * 100) / 12) + (((10 - data.getItem(2)) * 100) / 10) + (((10 - data.getItem(3)) * 100) / 10) +
                 (((10 - data.getItem(4)) * 100) / 10) + (((10 - data.getItem(5)) * 100) / 10) + (((10 - data.getItem(6)) * 100) / 10) + (((11 - data.getItem(7)) * 100) / 11) + (((10 - data.getItem(8)) * 100) / 10)) / 9;
-        s1.setText("Improvement possible :" + per + "%");
+        s11.setText(per + "%");
 /*        RadarDataSet set2 = new RadarDataSet(yVals2, "Set 2");
         set2.setColor(ColorTemplate.VORDIPLOM_COLORS[4]);
         set2.setDrawFilled(true);
